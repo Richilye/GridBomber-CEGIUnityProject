@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
         Debug.Log($"Vida mudou: {current}/{max}");
     }
 
-    public void UpdateAmmoCount(int current, int max)
+    public void UpdateBombCount(int current, int max)
     {
         // Bomberman não tem munição, mas podemos usar para "Bombas Restantes"
         Debug.Log($"Bombas: {current}");

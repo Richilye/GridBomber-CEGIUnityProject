@@ -6,7 +6,7 @@ public class GameplayManager : MonoBehaviour
     // Eventos estáticos que o Player e Inimigos podem chamar
     public static Action OnPlayerDied;
     public static Action<int, int> OnPlayerHealthChanged; // Atual Vida, Max Vida
-    public static Action<int, int> OnPlayerAmmoChanged;   // Bombas Atuais, Max Bombas
+    public static Action<int, int> OnPlayerBombCountChanged;   // Bombas Atuais, Max Bombas
 
     [Header("Configurações da Partida")]
     [SerializeField] private float m_maxGameplayTimeSec = 180; // 3 minutos é padrão Bomberman
@@ -25,7 +25,7 @@ public class GameplayManager : MonoBehaviour
         if (m_uiManager != null)
         {
             OnPlayerHealthChanged += m_uiManager.UpdateHealthBar;
-            OnPlayerAmmoChanged += m_uiManager.UpdateAmmoCount;
+            OnPlayerBombCountChanged += m_uiManager.UpdateBombCount;
         }
     }
 
@@ -88,7 +88,7 @@ public class GameplayManager : MonoBehaviour
         if (m_uiManager != null)
         {
             OnPlayerHealthChanged -= m_uiManager.UpdateHealthBar;
-            OnPlayerAmmoChanged -= m_uiManager.UpdateAmmoCount;
+            OnPlayerBombCountChanged -= m_uiManager.UpdateBombCount;
         }
     }
 }

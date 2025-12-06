@@ -6,36 +6,36 @@ public class Player : BaseCharacter
     [Header("Input Settings")]
     [SerializeField] private PlayerInput m_playerInput;
 
-    // Referência para o corpo físico
     private Rigidbody2D m_Rb;
-
-    // Variáveis internas para animação
     private Vector3 m_originalScale;
 
     protected override void Setup()
     {
-        // Pega o componente Rigidbody2D que adicionamos na Unity
         m_Rb = GetComponent<Rigidbody2D>();
-        
-        // Pega a escala original para virar o personagem depois
         m_originalScale = transform.localScale;
 
-        // Configura vida inicial (Código do professor)
         Health = MaxHealth;
-        GameplayManager.OnPlayerHealthChanged?.Invoke(Health, MaxHealth); //
+        // Se tiver UI Manager no futuro, descomente a linha abaixo
+        // GameplayManager.OnPlayerHealthChanged?.Invoke(Health, MaxHealth);
 
-        // --- CONFIGURAÇÃO DOS INPUTS ---
-        // O professor usava eventos (performed/canceled). 
-        // Vamos manter essa estrutura, mas armazenar o valor para usar no FixedUpdate.
-        
+        InitializeWeapons(); // <--- O PULO DO GATO ESTÁ AQUI
+
         if (m_playerInput != null)
         {
-            // Ação de Mover
             m_playerInput.actions["Move"].performed += ctx => HandleMovementInput(ctx.ReadValue<Vector2>());
             m_playerInput.actions["Move"].canceled += ctx => HandleMovementInput(Vector2.zero);
-
-            // Ação de Atacar (Colocar Bomba)
             m_playerInput.actions["Attack"].performed += ctx => Attack();
+        }
+    }
+
+    // Função nova para equipar a primeira arma (o BombPlacer)
+    private void InitializeWeapons()
+    {
+        if (m_Weapons != null && m_Weapons.Length > 0)
+        {
+            // Pega a primeira arma da lista (o BombPlacer que você arrastou)
+            m_CurrentWeapon = m_Weapons[0];
+            m_CurrentWeapon.SetActive(true);
         }
     }
 
@@ -43,92 +43,58 @@ public class Player : BaseCharacter
     {
         m_MovementDirection = direction;
 
-        // Lógica de Animação (Vira o sprite e seta a velocidade do Animator)
         if (m_MovementDirection == Vector2.zero)
         {
-            m_Animator.SetInteger("Speed", 0);
+            if (m_Animator) m_Animator.SetInteger("Speed", 0);
         }
         else
         {
-            // Vira o personagem horizontalmente baseado na direção X
             if (m_MovementDirection.x != 0)
             {
                 float facingDirection = Mathf.Sign(m_MovementDirection.x);
                 transform.localScale = new Vector3(facingDirection * Mathf.Abs(m_originalScale.x), m_originalScale.y, m_originalScale.z);
             }
-            m_Animator.SetInteger("Speed", 1);
+            if (m_Animator) m_Animator.SetInteger("Speed", 1);
         }
     }
 
-    // O UpdateLogic é chamado no Update do BaseCharacter.
-    // Para física (Rigidbody), o ideal é mover no FixedUpdate, mas para esse projeto simples,
-    // vamos controlar a velocidade aqui ou sobrescrever o UpdateLogic.
-    // Vamos ignorar o UpdateLogic do pai para movimento e usar FixedUpdate para física.
-    protected override void UpdateLogic()
-    {
-        // Deixamos vazio pois moveremos no FixedUpdate para evitar bugs de colisão
-    }
+    protected override void UpdateLogic() { }
 
     private void FixedUpdate()
     {
         if (CanWalk())
         {
-            MovePhysics();
+            // Usando velocity direto para Unity 2022/2023. 
+            // Se estiver na Unity 6 Preview e der erro, mude para linearVelocity
+            m_Rb.linearVelocity = m_MovementDirection * m_Speed;
         }
         else
         {
-            // Se não pode andar, para o corpo
-            m_Rb.linearVelocity = Vector2.zero; 
-            // OBS: Na Unity 6 "velocity" virou "linearVelocity". 
-            // Se der erro, troque por "m_Rb.velocity = Vector2.zero;"
+            m_Rb.linearVelocity = Vector2.zero;
         }
-    }
-
-    private void MovePhysics()
-    {
-        // Mover usando Física: Alteramos a velocidade do corpo diretamente.
-        // Isso impede que ele atravesse paredes e respeita a colisão.
-        m_Rb.linearVelocity = m_MovementDirection * m_Speed;
-        // OBS: Se der erro na Unity 6, troque por "m_Rb.velocity = ..."
     }
 
     protected override bool CanWalk()
     {
-        return IsAlive; // Só anda se estiver vivo
+        return IsAlive;
     }
 
-    protected override void Walk()
-    {
-        // Não usado mais, pois substituímos pelo MovePhysics no FixedUpdate
-    }
+    protected override void Walk() { }
 
     public override void Attack()
     {
         if (!IsAlive) return;
 
-        // Aqui futuramente chamaremos o código de colocar a bomba
-        // Por enquanto, deixamos o log para testar
         Debug.Log("Tentou colocar bomba!");
-        
-        base.Attack(); // Chama lógica base se tiver arma equipada
+
+        // Agora isso vai funcionar porque m_CurrentWeapon não é mais null!
+        base.Attack();
     }
 
     protected override void DieLogic()
     {
-        // Para o corpo imediatamente
         m_Rb.linearVelocity = Vector2.zero;
-        // OBS: Se der erro, troque por "velocity"
-
-        // Avisa o jogo que morreu
-        GameplayManager.OnPlayerDied?.Invoke(); //
-        
-        // Desativa colisões para não atrapalhar
+        GameplayManager.OnPlayerDied?.Invoke();
         GetComponent<Collider2D>().enabled = false;
-    }
-
-    // Implementação obrigatória da classe abstrata, mas bombas não usam "CanAttack" da mesma forma que armas
-    protected override bool CanAttack()
-    {
-        return true; 
     }
 }
