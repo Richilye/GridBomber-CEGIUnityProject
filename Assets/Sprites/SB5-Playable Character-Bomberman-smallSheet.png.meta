@@ -120,8 +120,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -142,8 +142,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,8 +164,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -186,8 +186,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 256
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 192
+        x: 0
+        y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -248,12 +248,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 32
+        y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 64
+        y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,12 +292,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 96
+        y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -314,12 +314,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 128
+        y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_10
       rect:
         serializedVersion: 2
-        x: 0
+        x: 160
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -358,12 +358,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_11
       rect:
         serializedVersion: 2
-        x: 32
+        x: 192
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -380,12 +380,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -402,12 +402,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_13
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
+        x: 0
+        y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,12 +424,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 32
+        y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -446,12 +446,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_15
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
+        x: 64
+        y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -468,12 +468,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_16
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
+        x: 96
+        y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -490,12 +490,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_17
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
+        x: 256
+        y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -512,12 +512,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_18
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
+        x: 0
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -534,12 +534,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_19
       rect:
         serializedVersion: 2
-        x: 288
-        y: 160
+        x: 32
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -556,12 +556,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -578,12 +578,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_21
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 128
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -600,12 +600,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_22
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 160
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -622,12 +622,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_23
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 192
+        y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -644,12 +644,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_24
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 0
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -666,12 +666,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_25
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 32
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -688,12 +688,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_26
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 64
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -710,12 +710,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_27
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
+        x: 128
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -732,12 +732,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_28
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 160
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -754,12 +754,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_29
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 192
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -776,12 +776,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 224
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -798,12 +798,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_31
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 256
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -820,12 +820,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_32
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 288
+        y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -842,12 +842,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_33
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 0
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -864,12 +864,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_34
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 32
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -886,12 +886,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_35
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
+        x: 64
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -908,12 +908,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_36
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 128
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -930,12 +930,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_37
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 160
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -952,12 +952,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_38
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
+        x: 192
+        y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -974,12 +974,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_39
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
+        x: 0
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -996,12 +996,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_40
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 32
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1018,12 +1018,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_41
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 64
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1040,12 +1040,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_42
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 96
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1062,12 +1062,12 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_43
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 128
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1084,570 +1084,20 @@ TextureImporter:
       name: SB5-Playable Character-Bomberman-smallSheet_44
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 192
+        y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a17b8edb3e070fc4b97e0506f955a7fb
+      spriteID: 2643f648a5bd6214d9ba613f0042d668
       internalID: 1722482481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_45
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f5c72029e1538c4281b943ac29ea127
-      internalID: -466572364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_46
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fb43b67bf7a0154d86919ac2ea3461a
-      internalID: 637609631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_47
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2765473ef7710304c99bebe3a857161e
-      internalID: -1911083965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_48
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bef694537ad76f44863b854583e983b
-      internalID: 1008118851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_49
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea76cff477bc5c641b54c6136320e74c
-      internalID: 723471962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_50
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b08b8ef7b760a043bb4e0f481b82e74
-      internalID: 1899475144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_51
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5d285a321c88f445a63216e1d65da63
-      internalID: -1645435309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_52
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c88a9081aad3ba4397fd80f44a3a9fa
-      internalID: -1819354071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_53
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1548e8e0d8408488b0472f68a94e56
-      internalID: 2095692986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_54
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 665e1b2927f0409479be1b7b3103d0b0
-      internalID: -1746510740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_55
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68373c187e9d54649be61dca031961fc
-      internalID: -1248927476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_56
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78fe1d9a301880d4b97d1d6188701df2
-      internalID: -1243532913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_57
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 357df5ffe0ebc8a4999c84797290c652
-      internalID: -531650709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_58
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 701fa3e5b4480de45acf602a98bad924
-      internalID: -1995323784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_59
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9ec4359554586a4ea380f216135bcc0
-      internalID: -829290777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_60
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01121ca443ed642478696a554327d63b
-      internalID: 1122437443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_61
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1049f9cc71d3d94abfdf84ada903fd7
-      internalID: 1494309236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_62
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffa6775b09fd9304492227aa047c57d8
-      internalID: -1841181513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_63
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e15ad590e7d4fd42bdb1d1e8cda34bd
-      internalID: -1688321681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_64
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f5b3402f34f8984883342c37cb02713
-      internalID: -306534000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_65
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4378a74d04245d94abc7760e8e9c691f
-      internalID: -410369858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_66
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a203205a8268f14092e64cbe16a388e
-      internalID: 1827256604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_67
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e17b61eba9d0da4b95bc015d3552f83
-      internalID: 46651769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_68
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 206ec7b50a91ddd4882c92f59c791492
-      internalID: -798920069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SB5-Playable Character-Bomberman-smallSheet_69
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd2108f4f700ae44590194a9352e34e3
-      internalID: -2090209886
       vertices: []
       indices: 
       edges: []
@@ -1666,7 +1116,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.125},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SB5-Playable Character-Bomberman-smallSheet_0: 2923674972783498557
       SB5-Playable Character-Bomberman-smallSheet_1: 6041135
@@ -1708,33 +1158,8 @@ TextureImporter:
       SB5-Playable Character-Bomberman-smallSheet_42: 1179082185
       SB5-Playable Character-Bomberman-smallSheet_43: 2098490785
       SB5-Playable Character-Bomberman-smallSheet_44: 1722482481
-      SB5-Playable Character-Bomberman-smallSheet_45: -466572364
-      SB5-Playable Character-Bomberman-smallSheet_46: 637609631
-      SB5-Playable Character-Bomberman-smallSheet_47: -1911083965
-      SB5-Playable Character-Bomberman-smallSheet_48: 1008118851
-      SB5-Playable Character-Bomberman-smallSheet_49: 723471962
       SB5-Playable Character-Bomberman-smallSheet_5: -1248568185
-      SB5-Playable Character-Bomberman-smallSheet_50: 1899475144
-      SB5-Playable Character-Bomberman-smallSheet_51: -1645435309
-      SB5-Playable Character-Bomberman-smallSheet_52: -1819354071
-      SB5-Playable Character-Bomberman-smallSheet_53: 2095692986
-      SB5-Playable Character-Bomberman-smallSheet_54: -1746510740
-      SB5-Playable Character-Bomberman-smallSheet_55: -1248927476
-      SB5-Playable Character-Bomberman-smallSheet_56: -1243532913
-      SB5-Playable Character-Bomberman-smallSheet_57: -531650709
-      SB5-Playable Character-Bomberman-smallSheet_58: -1995323784
-      SB5-Playable Character-Bomberman-smallSheet_59: -829290777
       SB5-Playable Character-Bomberman-smallSheet_6: -1864577267
-      SB5-Playable Character-Bomberman-smallSheet_60: 1122437443
-      SB5-Playable Character-Bomberman-smallSheet_61: 1494309236
-      SB5-Playable Character-Bomberman-smallSheet_62: -1841181513
-      SB5-Playable Character-Bomberman-smallSheet_63: -1688321681
-      SB5-Playable Character-Bomberman-smallSheet_64: -306534000
-      SB5-Playable Character-Bomberman-smallSheet_65: -410369858
-      SB5-Playable Character-Bomberman-smallSheet_66: 1827256604
-      SB5-Playable Character-Bomberman-smallSheet_67: 46651769
-      SB5-Playable Character-Bomberman-smallSheet_68: -798920069
-      SB5-Playable Character-Bomberman-smallSheet_69: -2090209886
       SB5-Playable Character-Bomberman-smallSheet_7: 952158031
       SB5-Playable Character-Bomberman-smallSheet_8: 2072541460
       SB5-Playable Character-Bomberman-smallSheet_9: -256887056

@@ -1,49 +1,89 @@
 ﻿using UnityEngine;
 
-// Herda de BaseWeapon para funcionar com o sistema do Player
 public class BombPlacer : BaseWeapon
 {
     [Header("Configurações da Bomba")]
-    [SerializeField] private Bomb m_BombPrefab; // Referência ao prefab que criamos
-    [SerializeField] private int m_BombRange = 1; // Alcance inicial
+    [SerializeField] private Bomb m_BombPrefab;
+    [SerializeField] private int m_BombRange = 1;
+    [SerializeField] private int m_MaxBombs = 1; // Começa podendo por 1 bomba
 
-    // Variáveis internas para lógica de grid
+    private int m_ActiveBombs = 0; // Quantas tem no chão agora
     private Grid m_Grid;
 
     private void Start()
     {
-        // Acha o Grid na cena automaticamente para alinhar a bomba
         m_Grid = FindFirstObjectByType<Grid>();
+
+        // Avisa a UI inicial
+        GameplayManager.OnPlayerRangeChanged?.Invoke(m_BombRange);
+        GameplayManager.OnPlayerBombCountChanged?.Invoke(m_MaxBombs - m_ActiveBombs, m_MaxBombs);
+    }
+
+    public override bool CanUse()
+    {
+        // 1. Verifica Cooldown (Tempo mínimo entre cliques, coloque 0.1 no Inspector)
+        if (!base.CanUse()) return false;
+
+        // 2. Verifica Quantidade
+        if (m_ActiveBombs >= m_MaxBombs)
+        {
+            Debug.Log("Limite de bombas atingido!");
+            return false;
+        }
+
+        return true;
     }
 
     public override void Use()
     {
-        // Verifica cooldown (herdado do BaseWeapon)
-        if (!CanUse()) return;
-
-        PlaceBomb();
+        if (CanUse()) PlaceBomb();
     }
+
+    // --- MÉTODOS PARA OS ITENS CHAMAREM ---
+    public void IncreaseRange()
+    {
+        m_BombRange++;
+        GameplayManager.OnPlayerRangeChanged?.Invoke(m_BombRange);
+    }
+
+    public void IncreaseMaxBombs()
+    {
+        m_MaxBombs++;
+        GameplayManager.OnPlayerBombCountChanged?.Invoke(m_MaxBombs - m_ActiveBombs, m_MaxBombs);
+    }
+    // -------------------------------------
 
     private void PlaceBomb()
     {
-        // 1. Onde colocar? Na posição do Player
+        if (m_Grid == null) return;
+
         Vector3 playerPos = m_Owner.transform.position;
-
-        // 2. Alinhamento com a Grade (Snap to Grid)
-        // Isso converte a posição livre (ex: 1.54, 2.33) para indices da grid (1, 2)
         Vector3Int cellPosition = m_Grid.WorldToCell(playerPos);
-
-        // Converte de volta para o centro daquela célula no mundo
         Vector3 spawnPos = m_Grid.GetCellCenterWorld(cellPosition);
+        spawnPos.z = 0;
 
-        // 3. Cria a bomba
+        // 3. VERIFICA SE JÁ TEM BOMBA NO LOCAL
+        // Cria um circulo pequeno (0.4f) e vê se bate em alguma coisa que seja Bomba
+        Collider2D hit = Physics2D.OverlapCircle(spawnPos, 0.4f);
+        if (hit != null && hit.GetComponent<Bomb>() != null)
+        {
+            // Já tem bomba aqui! Cancela.
+            return;
+        }
+
         Bomb newBomb = Instantiate(m_BombPrefab, spawnPos, Quaternion.identity);
-        newBomb.Setup(m_Damage, m_BombRange);
 
-        // Atualiza tempo do último ataque para o cooldown funcionar
+        // AUMENTA CONTADOR
+        m_ActiveBombs++;
+        GameplayManager.OnPlayerBombCountChanged?.Invoke(m_MaxBombs - m_ActiveBombs, m_MaxBombs);
+
+        // Passa a função que diminui o contador quando explodir
+        newBomb.Setup(m_Damage, m_BombRange, () =>
+        {
+            m_ActiveBombs--;
+            GameplayManager.OnPlayerBombCountChanged?.Invoke(m_MaxBombs - m_ActiveBombs, m_MaxBombs);
+        });
+
         m_LastAttackTime = Time.time;
-
-        // Toca som (se tivermos Audio Manager futuramente)
-        Debug.Log("Bomba plantada em: " + cellPosition);
     }
 }

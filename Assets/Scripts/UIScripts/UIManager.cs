@@ -1,10 +1,21 @@
 ﻿using UnityEngine;
-using TMPro; // Necessário para textos (TextMeshPro)
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    // Singleton simples para facilitar acesso (opcional, mas ajuda)
     public static UIManager Instance;
+
+    [Header("Paineis")]
+    [SerializeField] private GameObject m_GameOverPanel;
+
+    [Header("HUD Texts (Arraste os Textos aqui)")]
+    [SerializeField] private TextMeshProUGUI m_HealthText;
+    [SerializeField] private TextMeshProUGUI m_BombText;
+    [SerializeField] private TextMeshProUGUI m_LivesText;
+    [SerializeField] private TextMeshProUGUI m_RangeText;
+    [SerializeField] private TextMeshProUGUI m_ScoreText;
+    [SerializeField] private TextMeshProUGUI m_TimerText;
 
     private void Awake()
     {
@@ -13,29 +24,61 @@ public class UIManager : MonoBehaviour
 
     public void Initialize()
     {
-        // Configurações iniciais da tela
-        Debug.Log("UI Iniciada");
+        if (m_GameOverPanel) m_GameOverPanel.SetActive(false);
     }
 
-    // Funções que o GameplayManager do professor chama (para não quebrar o código dele)
+    // --- FUNÇÕES DE ATUALIZAÇÃO ---
+
+    public void UpdateTime(float timeRemaining)
+    {
+        if (m_TimerText)
+        {
+            // Formata para 00:00 (Minutos:Segundos)
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            m_TimerText.text = $"{minutes:00}:{seconds:00}";
+
+            // Opcional: Ficar vermelho quando tiver pouco tempo
+            if (timeRemaining < 30) m_TimerText.color = Color.red;
+            else m_TimerText.color = Color.white;
+        }
+    }
+
     public void UpdateHealthBar(int current, int max)
     {
-        Debug.Log($"Vida mudou: {current}/{max}");
+        // Mostra "0" se tiver 1 de vida (Vida Extra)
+        // Mathf.Max(0, ...) garante que nunca mostre -1
+        if (m_HealthText) m_HealthText.text = $"x {Mathf.Max(0, current - 1)}";
     }
 
     public void UpdateBombCount(int current, int max)
     {
-        // Bomberman não tem munição, mas podemos usar para "Bombas Restantes"
-        Debug.Log($"Bombas: {current}");
+        if (m_BombText) m_BombText.text = $"x {current}"; // Ex: 💣 x 1
     }
 
-    public void UpdateEnemiesDiedCount(int count)
+    public void UpdateLives(int lives)
     {
-        Debug.Log($"Inimigos mortos: {count}");
+        if (m_LivesText) m_LivesText.text = $"x {Mathf.Max(0, lives - 1)}";
+    }
+
+    public void UpdateRange(int range)
+    {
+        if (m_RangeText) m_RangeText.text = $"x {range}"; // Ex: (Fogo) x 2
+    }
+
+    public void UpdateScore(int score)
+    {
+        // "D6" formata o numero com zeros a esquerda: 000100
+        if (m_ScoreText) m_ScoreText.text = $"SCORE: {score:D6}";
     }
 
     public void ShowGameOverPanel()
     {
-        Debug.Log("GAME OVER - Tela apareceu");
+        if (m_GameOverPanel) m_GameOverPanel.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

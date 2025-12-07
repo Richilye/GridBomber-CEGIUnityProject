@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8615418069821601229}
   - component: {fileID: 8858155205799830457}
   - component: {fileID: -3628053462920130653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -142,3 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   m_FuseTime: 3
   m_Damage: 1
+  m_ExplosionPrefab: {fileID: 2549158966310770290, guid: 2b118bf97e585cf459b7cf8d3cecb8fe, type: 3}
+  m_LevelLayer:
+    serializedVersion: 2
+    m_Bits: 64

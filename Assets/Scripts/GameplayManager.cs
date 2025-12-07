@@ -3,70 +3,107 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
-    // Eventos estáticos que o Player e Inimigos podem chamar
+    // --- EVENTOS ---
     public static Action OnPlayerDied;
-    public static Action<int, int> OnPlayerHealthChanged; // Atual Vida, Max Vida
-    public static Action<int, int> OnPlayerBombCountChanged;   // Bombas Atuais, Max Bombas
+    public static Action<Vector3> OnEnemyDied;
 
-    [Header("Configurações da Partida")]
-    [SerializeField] private float m_maxGameplayTimeSec = 180; // 3 minutos é padrão Bomberman
+    public static Action<int, int> OnPlayerHealthChanged;
+    public static Action<int, int> OnPlayerBombCountChanged;
+    public static Action<int> OnPlayerLivesChanged;
+    public static Action<int> OnPlayerRangeChanged;
+    public static Action<int> OnScoreChanged;
+
+    [Header("Configurações")]
+    [SerializeField] private float m_maxGameplayTimeSec = 180;
     [SerializeField] private Player m_player;
     [SerializeField] private UIManager m_uiManager;
+
+    [Header("Prefabs")]
+    [SerializeField] private FloatingScore m_ScorePopupPrefab; //prefab do floating text.
 
     private bool m_isGameRunning;
     private float m_gameplayTimer;
 
+    // --- VARIÁVEIS DE SCORE E COMBO ---
+    private int m_CurrentScore;
+    private int m_ComboMultiplier = 1;
+    private float m_LastKillTime = 0f;
+    private const float COMBO_WINDOW = 0.5f; // Meio segundo para manter o combo
+
     private void Awake()
     {
-        // Inscrevendo as funções nos eventos
         OnPlayerDied += HandleOnPlayerDied;
+        OnEnemyDied += HandleOnEnemyDied;
 
-        // Conecta os eventos de UI se o UIManager existir
         if (m_uiManager != null)
         {
             OnPlayerHealthChanged += m_uiManager.UpdateHealthBar;
             OnPlayerBombCountChanged += m_uiManager.UpdateBombCount;
+            OnPlayerLivesChanged += m_uiManager.UpdateLives;
+            OnPlayerRangeChanged += m_uiManager.UpdateRange;
+            OnScoreChanged += m_uiManager.UpdateScore;
         }
     }
 
     private void Start()
     {
-        // Se esqueceu de arrastar o Player no Inspector, tenta achar sozinho
-        if (m_player == null)
-            m_player = FindFirstObjectByType<Player>();
-
-        if (m_uiManager != null)
-            m_uiManager.Initialize();
+        if (m_player == null) m_player = FindFirstObjectByType<Player>();
+        if (m_uiManager != null) m_uiManager.Initialize();
 
         if (m_player != null)
         {
-            m_player.Initialize(); // Inicia vida e inputs do Player
+            m_player.Initialize();
             m_isGameRunning = true;
-        }
-        else
-        {
-            Debug.LogError("Player não encontrado na cena! Arraste o Player para o campo 'Player' no GameplayManager.");
         }
 
         m_gameplayTimer = Time.time;
+        m_CurrentScore = 0;
+        OnScoreChanged?.Invoke(m_CurrentScore);
     }
 
     private void Update()
     {
         if (!m_isGameRunning) return;
 
-        // Verifica o tempo limite da fase
-        if (Time.time - m_gameplayTimer > m_maxGameplayTimeSec)
+        float timeRemaining = m_maxGameplayTimeSec - (Time.time - m_gameplayTimer);
+
+        if (timeRemaining <= 0)
         {
             Debug.Log("Tempo Esgotado!");
+            if (m_uiManager != null) m_uiManager.UpdateTime(0);
             EndGameplay();
+        }
+        else
+        {
+            if (m_uiManager != null) m_uiManager.UpdateTime(timeRemaining);
         }
     }
 
     private void HandleOnPlayerDied()
     {
-        Debug.Log("Player Morreu!");
+        Debug.Log("Game Over!");
         EndGameplay();
+    }
+
+    // --- LÓGICA DE COMBO NOVA ---
+    private void HandleOnEnemyDied(Vector3 enemyPosition)
+    {
+        if (Time.time - m_LastKillTime < COMBO_WINDOW) m_ComboMultiplier++;
+        else m_ComboMultiplier = 1;
+
+        int points = 100 * m_ComboMultiplier;
+        m_CurrentScore += points;
+
+        OnScoreChanged?.Invoke(m_CurrentScore);
+        m_LastKillTime = Time.time;
+
+        // --- NOVA LÓGICA: SPAWNAR O TEXTO ---
+        if (m_ScorePopupPrefab != null)
+        {
+            // Cria o texto na posição do inimigo
+            FloatingScore popup = Instantiate(m_ScorePopupPrefab, enemyPosition, Quaternion.identity);
+            popup.Setup(points);
+        }
     }
 
     private void EndGameplay()
@@ -74,21 +111,22 @@ public class GameplayManager : MonoBehaviour
         if (!m_isGameRunning) return;
         m_isGameRunning = false;
 
-        // Se tiver UI, mostra Game Over
         if (m_uiManager != null)
             m_uiManager.ShowGameOverPanel();
-        else
-            Debug.Log("Fim de Jogo (Sem UI configurada)");
     }
 
-    // Importante remover os eventos ao destruir o objeto para não dar erro de memória
     private void OnDestroy()
     {
         OnPlayerDied -= HandleOnPlayerDied;
+        OnEnemyDied -= HandleOnEnemyDied;
+
         if (m_uiManager != null)
         {
             OnPlayerHealthChanged -= m_uiManager.UpdateHealthBar;
             OnPlayerBombCountChanged -= m_uiManager.UpdateBombCount;
+            OnPlayerLivesChanged -= m_uiManager.UpdateLives;
+            OnPlayerRangeChanged -= m_uiManager.UpdateRange;
+            OnScoreChanged -= m_uiManager.UpdateScore;
         }
     }
 }
