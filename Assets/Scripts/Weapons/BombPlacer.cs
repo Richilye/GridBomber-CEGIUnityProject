@@ -6,6 +6,8 @@ public class BombPlacer : BaseWeapon
     [SerializeField] private Bomb m_BombPrefab;
     [SerializeField] private int m_BombRange = 1;
     [SerializeField] private int m_MaxBombs = 1; // Começa podendo por 1 bomba
+    [Header("Audio")]
+    [SerializeField] private AudioClip m_PlaceBombSound; 
 
     private int m_ActiveBombs = 0; // Quantas tem no chão agora
     private Grid m_Grid;
@@ -70,7 +72,8 @@ public class BombPlacer : BaseWeapon
             // Já tem bomba aqui! Cancela.
             return;
         }
-
+        //tocar som de colocar bomba
+        if (m_PlaceBombSound) GameplayManager.Instance.PlaySFX(m_PlaceBombSound);
         Bomb newBomb = Instantiate(m_BombPrefab, spawnPos, Quaternion.identity);
 
         // AUMENTA CONTADOR

@@ -18,6 +18,11 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] private Player m_player;
     [SerializeField] private UIManager m_uiManager;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource m_MusicSource; // Crie um AudioSource no objeto Managers
+    [SerializeField] private AudioSource m_SfxSource;
+    [SerializeField] private AudioClip m_StageBGM;
+
     [Header("Prefabs")]
     [SerializeField] private FloatingScore m_ScorePopupPrefab; //prefab do floating text.
 
@@ -30,8 +35,13 @@ public class GameplayManager : MonoBehaviour
     private float m_LastKillTime = 0f;
     private const float COMBO_WINDOW = 0.5f; // Meio segundo para manter o combo
 
+    public static GameplayManager Instance;
+
     private void Awake()
     {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
         OnPlayerDied += HandleOnPlayerDied;
         OnEnemyDied += HandleOnEnemyDied;
 
@@ -59,6 +69,15 @@ public class GameplayManager : MonoBehaviour
         m_gameplayTimer = Time.time;
         m_CurrentScore = 0;
         OnScoreChanged?.Invoke(m_CurrentScore);
+        if (m_MusicSource && m_StageBGM)
+        {
+            m_MusicSource.clip = m_StageBGM;
+            m_MusicSource.loop = true; // Loop infinito
+            m_MusicSource.Play();
+        }
+        Canvas canvas = GetComponentInChildren<Canvas>();
+        if (canvas.worldCamera == null)
+            canvas.worldCamera = Camera.main;
     }
 
     private void Update()
@@ -76,6 +95,14 @@ public class GameplayManager : MonoBehaviour
         else
         {
             if (m_uiManager != null) m_uiManager.UpdateTime(timeRemaining);
+        }
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (clip != null && m_SfxSource != null)
+        {
+            m_SfxSource.PlayOneShot(clip);
         }
     }
 

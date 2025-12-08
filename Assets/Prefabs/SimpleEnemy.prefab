@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 133680060773362439}
   - component: {fileID: 6222965790231879370}
   - component: {fileID: 295351899686481957}
+  - component: {fileID: 4611990849902941434}
   m_Layer: 0
   m_Name: SimpleEnemy
   m_TagString: Enemy
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleEnemy
   <Name>k__BackingField: Enemy1
   <MaxHealth>k__BackingField: 1
+  m_DeathSound: {fileID: 0}
   m_InvincibilityDuration: 2
   m_Speed: 2
   m_Animator: {fileID: 0}
@@ -178,3 +180,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.025102735, y: 0.19935119}
   m_Radius: 0.44919908
+--- !u!95 &4611990849902941434
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6518334547447146018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

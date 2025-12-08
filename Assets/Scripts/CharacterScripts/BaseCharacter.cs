@@ -6,6 +6,8 @@ public abstract class BaseCharacter : MonoBehaviour
     [field: SerializeField] public string Name { get; protected set; }
     [field: SerializeField] public int MaxHealth { get; protected set; } = 3;
 
+    [SerializeField] protected AudioClip m_DeathSound;
+
     // Configurações de Dano e Invencibilidade
     [SerializeField] protected float m_InvincibilityDuration = 2f;
     [SerializeField] protected float m_Speed = 5f;
@@ -98,6 +100,8 @@ public abstract class BaseCharacter : MonoBehaviour
     protected virtual void Die()
     {
         if (!IsAlive) return;
+        //tocar som de morrer
+        if (m_DeathSound) GameplayManager.Instance.PlaySFX(m_DeathSound);
         IsAlive = false;
         DieLogic();
         if (m_Animator) m_Animator.SetBool("Dead", true);

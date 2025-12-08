@@ -27,7 +27,7 @@ public class ItemPickup : MonoBehaviour
             {
                 // Toca o som no local do item, independente do objeto morrer
                 if (m_PickupSound != null)
-                    AudioSource.PlayClipAtPoint(m_PickupSound, transform.position);
+                    GameplayManager.Instance.PlaySFX(m_PickupSound);
 
                 ApplyEffect(player);
                 Destroy(gameObject);

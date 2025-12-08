@@ -10,6 +10,9 @@ public class Bomb : MonoBehaviour
     [SerializeField] private Explosion m_ExplosionPrefab;
     [SerializeField] private LayerMask m_LevelLayer;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip m_ExplosionSound;
+
     private int m_ExplosionRange;
     private Collider2D m_Collider;
     private bool m_HasExploded = false;
@@ -59,6 +62,8 @@ public class Bomb : MonoBehaviour
 
         // AVISA O PLACER QUE LIBEROU UM SLOT
         m_OnExplodeCallback?.Invoke();
+        //Toca o som de explosão
+        if (m_ExplosionSound) GameplayManager.Instance.PlaySFX(m_ExplosionSound);
 
         Instantiate(m_ExplosionPrefab, transform.position, Quaternion.identity);
 

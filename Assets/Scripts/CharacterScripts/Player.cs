@@ -89,18 +89,27 @@ public class Player : BaseCharacter
     {
         m_MovementDirection = direction;
 
-        if (m_MovementDirection == Vector2.zero)
+        // Se a direção for diferente de zero, estamos nos movendo
+        if (m_MovementDirection != Vector2.zero)
         {
-            if (m_Animator) m_Animator.SetInteger("Speed", 0);
+            // Avisa o Animator que estamos andando
+            m_Animator.SetBool("IsMoving", true);
+
+            // Alimenta o Blend Tree com a direção (para ele saber se toca Cima, Baixo ou Lado)
+            m_Animator.SetFloat("InputX", m_MovementDirection.x);
+            m_Animator.SetFloat("InputY", m_MovementDirection.y);
+
+            // Mantemos a variável Speed antiga por segurança se tiver transições antigas
+            m_Animator.SetInteger("Speed", 1);
         }
         else
         {
-            if (m_MovementDirection.x != 0)
-            {
-                float facingDirection = Mathf.Sign(m_MovementDirection.x);
-                transform.localScale = new Vector3(facingDirection * Mathf.Abs(m_originalScale.x), m_originalScale.y, m_originalScale.z);
-            }
-            if (m_Animator) m_Animator.SetInteger("Speed", 1);
+            // Parado
+            m_Animator.SetBool("IsMoving", false);
+            m_Animator.SetInteger("Speed", 0);
+
+            // NOTA: Não zeramos o InputX/InputY aqui!
+            // Se deixarmos os valores antigos, o Blend Tree "lembra" a última direção.
         }
     }
 
