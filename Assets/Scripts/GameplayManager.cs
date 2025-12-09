@@ -33,7 +33,7 @@ public class GameplayManager : MonoBehaviour
     private int m_CurrentScore;
     private int m_ComboMultiplier = 1;
     private float m_LastKillTime = 0f;
-    private const float COMBO_WINDOW = 0.5f; //tempo de combo kills
+    private const float COMBO_WINDOW = 0.5f; //tempo de combo kills durante explosões
 
     public static GameplayManager Instance;
 

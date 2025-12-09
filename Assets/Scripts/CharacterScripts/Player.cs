@@ -26,7 +26,6 @@ public class Player : BaseCharacter
 
         InitializeWeapons();
 
-        // Avisa a UI sobre as Vidas e a Vida(HP) iniciais
         GameplayManager.OnPlayerLivesChanged?.Invoke(s_CurrentLives);
         GameplayManager.OnPlayerHealthChanged?.Invoke(Health, MaxHealth);
 
@@ -55,7 +54,6 @@ public class Player : BaseCharacter
         }
     }
 
-    // Funções separadas para o Input (facilitam o unsubscribe)
     private void OnMovePerformed(InputAction.CallbackContext ctx)
     {
         HandleMovementInput(ctx.ReadValue<Vector2>());
@@ -70,7 +68,6 @@ public class Player : BaseCharacter
     {
         Attack();
     }
-    // --------------------------------
 
     private void InitializeWeapons()
     {
@@ -86,17 +83,13 @@ public class Player : BaseCharacter
     {
         m_MovementDirection = direction;
 
-        // Se a direção for diferente de zero, estamos nos movendo
         if (m_MovementDirection != Vector2.zero)
         {
-            // Avisa o Animator que estamos andando
             m_Animator.SetBool("IsMoving", true);
 
-            // Alimenta o Blend Tree com a direção (para ele saber se toca Cima, Baixo ou Lado)
             m_Animator.SetFloat("InputX", m_MovementDirection.x);
             m_Animator.SetFloat("InputY", m_MovementDirection.y);
 
-            // Mantemos a variável Speed antiga por segurança se tiver transições antigas
             m_Animator.SetInteger("Speed", 1);
         }
         else
@@ -109,7 +102,6 @@ public class Player : BaseCharacter
 
     protected override void UpdateLogic() { }
 
-    // Usar FixedUpdate para movimentação física para evitar bugs de colisão com paredes.
     private void FixedUpdate()
     {
         if (CanWalk())
@@ -127,7 +119,7 @@ public class Player : BaseCharacter
         base.Attack();
     }
 
-    // --- MÉTODOS DE POWER-UP (Chamados pelo ItemPickup) ---
+    // --- POWER-UP METHODS---
 
     public void AddMaxBombs()
     {
@@ -176,16 +168,13 @@ public class Player : BaseCharacter
 
     public override void TakeDamage(int damage)
     {
-        // Salva a vida antes do dano para saber se mudou
+
         int healthBefore = Health;
 
-        // Chama a lógica padrão do pai (reduzir vida, invencibilidade, animação, morte)
         base.TakeDamage(damage);
 
-        // Se a vida mudou (ou seja, não estava invencível), avisa a UI
         if (Health != healthBefore)
         {
-            // Mathf.Max(0, Health) garante que não mande vida negativa (-1) para a UI
             GameplayManager.OnPlayerHealthChanged?.Invoke(Mathf.Max(0, Health), MaxHealth);
         }
     }

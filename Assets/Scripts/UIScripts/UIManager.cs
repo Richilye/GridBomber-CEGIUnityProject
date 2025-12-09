@@ -27,8 +27,6 @@ public class UIManager : MonoBehaviour
         if (m_GameOverPanel) m_GameOverPanel.SetActive(false);
     }
 
-    // --- FUNÇÕES DE ATUALIZAÇÃO ---
-
     public void UpdateTime(float timeRemaining)
     {
         if (m_TimerText)
