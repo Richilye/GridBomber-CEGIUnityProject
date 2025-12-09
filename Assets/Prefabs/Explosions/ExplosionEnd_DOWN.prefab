@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2549158966310770290}
   - component: {fileID: 4671743828081435377}
   m_Layer: 0
-  m_Name: ExplosionEnd
+  m_Name: ExplosionEnd_DOWN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -497456509, guid: 9acea0bb5f013e6488b743eebe36d717, type: 3}
+  m_Sprite: {fileID: 1012791694, guid: 9acea0bb5f013e6488b743eebe36d717, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,7 +163,7 @@ Animator:
   m_GameObject: {fileID: 1376621136158769000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a3efda353c8c3ed4db4e97e427b1185a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 573dd2d9af83fe246bdaad7e6210a2dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

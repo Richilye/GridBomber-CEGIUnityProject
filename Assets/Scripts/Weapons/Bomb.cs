@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    [Header("Visual da Explosão")]
+    [Header("Visual da Explosão (Prefabs)")]
     [SerializeField] private Explosion m_ExplosionCenter;
-    [SerializeField] private Explosion m_ExplosionMiddle; // O "tubo"
-    [SerializeField] private Explosion m_ExplosionEnd;    // A "ponta"
 
-    // ... (Variáveis existentes: FuseTime, Damage, LayerMask, etc) ...
+    [Header("Meios (Tubos)")]
+    [SerializeField] private Explosion m_MiddleHorizontal; // Deitado
+    [SerializeField] private Explosion m_MiddleVertical;   // Em pé
+
+    [Header("Pontas (Ends)")]
+    [SerializeField] private Explosion m_EndUp;
+    [SerializeField] private Explosion m_EndDown;
+    [SerializeField] private Explosion m_EndLeft;
+    [SerializeField] private Explosion m_EndRight;
+
+    [Header("Configurações")]
     [SerializeField] private float m_FuseTime = 3f;
     [SerializeField] private int m_Damage = 1;
     [SerializeField] private LayerMask m_LevelLayer;
-    [Header("Audio")]
     [SerializeField] private AudioClip m_ExplosionSound;
 
     private int m_ExplosionRange;
     private Collider2D m_Collider;
     private bool m_HasExploded = false;
-    private Action m_OnExplodeCallback; 
+    private Action m_OnExplodeCallback;
 
     private void Awake()
     {
@@ -59,12 +66,12 @@ public class Bomb : MonoBehaviour
         m_HasExploded = true;
 
         m_OnExplodeCallback?.Invoke();
-        if(GameplayManager.Instance) GameplayManager.Instance.PlaySFX(m_ExplosionSound);
+        if (GameplayManager.Instance) GameplayManager.Instance.PlaySFX(m_ExplosionSound);
 
-        // 1. Instancia o CENTRO (Sem rotação)
+        // Centro sempre igual
         Instantiate(m_ExplosionCenter, transform.position, Quaternion.identity);
 
-        // 2. Espalha para as direções
+        // Espalha
         StartCoroutine(CreateExplosions(Vector2.up));
         StartCoroutine(CreateExplosions(Vector2.down));
         StartCoroutine(CreateExplosions(Vector2.left));
@@ -81,40 +88,53 @@ public class Bomb : MonoBehaviour
         {
             Vector3 position = transform.position + (Vector3)(direction * i);
 
-            // Calcula a rotação baseada na direção
-            // Atan2 dá o ângulo em radianos, convertemos para graus e criamos a rotação Z
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.Euler(0, 0, angle);
-
             Collider2D hit = Physics2D.OverlapBox(position, Vector2.one * 0.5f, 0, m_LevelLayer);
 
+            // Se bateu em algo (Parede ou Bloco)
             if (hit != null)
             {
                 DestructibleBlock block = hit.GetComponent<DestructibleBlock>();
                 if (block != null)
                 {
                     block.DestroyBlock();
-                    // Na parede, sempre usamos a PONTA ou o CENTRO, pois a explosão morre ali
-                    Instantiate(m_ExplosionEnd, position, rotation); 
+                    // Na parede quebrável, usamos a PONTA correta para aquela direção
+                    Instantiate(GetEndPrefab(direction), position, Quaternion.identity);
                 }
                 Bomb otherBomb = hit.GetComponent<Bomb>();
                 if (otherBomb != null) otherBomb.ForceExplode();
                 break;
             }
 
-            // Lógica: É o último bloco do range?
+            // Se for o último bloco do range
             if (i == m_ExplosionRange)
             {
-                // Sim: Usa a PONTA
-                Instantiate(m_ExplosionEnd, position, rotation);
+                Instantiate(GetEndPrefab(direction), position, Quaternion.identity);
             }
             else
             {
-                // Não: Usa o MEIO
-                Instantiate(m_ExplosionMiddle, position, rotation);
+                // Se for meio do caminho
+                Instantiate(GetMiddlePrefab(direction), position, Quaternion.identity);
             }
 
             yield return new WaitForSeconds(0.05f);
         }
+    }
+
+    // --- LÓGICA PARA ESCOLHER O PREFAB CERTO ---
+    private Explosion GetEndPrefab(Vector2 direction)
+    {
+        if (direction == Vector2.up) return m_EndUp;
+        if (direction == Vector2.down) return m_EndDown;
+        if (direction == Vector2.left) return m_EndLeft;
+        if (direction == Vector2.right) return m_EndRight;
+        return m_ExplosionCenter; // Fallback
+    }
+
+    private Explosion GetMiddlePrefab(Vector2 direction)
+    {
+        // Se for vertical (Y != 0), usa o tubo em pé
+        if (direction.y != 0) return m_MiddleVertical;
+        // Se for horizontal, usa o tubo deitado
+        return m_MiddleHorizontal;
     }
 }

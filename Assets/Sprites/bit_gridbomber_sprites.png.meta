@@ -1,0 +1,685 @@
+fileFormatVersion: 2
+guid: 07228d40a8a594642b9ad1a78d6df5a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8528957228200583243
+    second: bit_gridbomber_sprites_0
+  - first:
+      213: 653678544236930293
+    second: bit_gridbomber_sprites_1
+  - first:
+      213: 5780751575839106893
+    second: bit_gridbomber_sprites_2
+  - first:
+      213: 128445734709927261
+    second: bit_gridbomber_sprites_3
+  - first:
+      213: 8249208292096084461
+    second: bit_gridbomber_sprites_4
+  - first:
+      213: 8638301971767086917
+    second: bit_gridbomber_sprites_5
+  - first:
+      213: -8151283382536532652
+    second: bit_gridbomber_sprites_6
+  - first:
+      213: -3879782333085971433
+    second: bit_gridbomber_sprites_7
+  - first:
+      213: 1374380953552504630
+    second: bit_gridbomber_sprites_8
+  - first:
+      213: -7158089865100388543
+    second: bit_gridbomber_sprites_9
+  - first:
+      213: -6250832532645769
+    second: bit_gridbomber_sprites_10
+  - first:
+      213: -5650827140784473990
+    second: bit_gridbomber_sprites_11
+  - first:
+      213: -218803742592728187
+    second: bit_gridbomber_sprites_12
+  - first:
+      213: 4741253170651621347
+    second: bit_gridbomber_sprites_13
+  - first:
+      213: 6036767203882782219
+    second: bit_gridbomber_sprites_14
+  - first:
+      213: 6863113869117914888
+    second: bit_gridbomber_sprites_15
+  - first:
+      213: -466531093814450821
+    second: bit_gridbomber_sprites_16
+  - first:
+      213: 167625647870592952
+    second: bit_gridbomber_sprites_17
+  - first:
+      213: 506272363360054231
+    second: bit_gridbomber_sprites_18
+  - first:
+      213: 2163725920666245751
+    second: bit_gridbomber_sprites_19
+  - first:
+      213: 5976545568048468628
+    second: bit_gridbomber_sprites_20
+  - first:
+      213: -3267463692219355454
+    second: bit_gridbomber_sprites_21
+  - first:
+      213: 7026022514054869491
+    second: bit_gridbomber_sprites_22
+  - first:
+      213: 9146686037725392121
+    second: bit_gridbomber_sprites_23
+  - first:
+      213: 7144666460430400813
+    second: bit_gridbomber_sprites_24
+  - first:
+      213: -8648860709172009375
+    second: bit_gridbomber_sprites_25
+  - first:
+      213: -3610834204915305322
+    second: bit_gridbomber_sprites_26
+  - first:
+      213: 4275087895457361541
+    second: bit_gridbomber_sprites_27
+  - first:
+      213: -2691924026343855172
+    second: bit_gridbomber_sprites_28
+  - first:
+      213: 8797803181036363380
+    second: bit_gridbomber_sprites_29
+  - first:
+      213: -8280045390016620620
+    second: bit_gridbomber_sprites_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4065632961fc5670800000000000000
+      internalID: 8528957228200583243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1920
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f469823c25521900800000000000000
+      internalID: 653678544236930293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1920
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d476ba43eea593050800000000000000
+      internalID: 5780751575839106893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1920
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d9c4617b458c100800000000000000
+      internalID: 128445734709927261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de908984c331b7270800000000000000
+      internalID: 8249208292096084461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fcbb920e961e770800000000000000
+      internalID: 8638301971767086917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d8d5073f2d0ee80800000000000000
+      internalID: -8151283382536532652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c0396268e382ac0800000000000000
+      internalID: -3879782333085971433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6374f8a0238c21310800000000000000
+      internalID: 1374380953552504630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1471e50613b59ac90800000000000000
+      internalID: -7158089865100388543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1600
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7785753a6eac9eff0800000000000000
+      internalID: -6250832532645769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78b762a7aa3491b0800000000000000
+      internalID: -5650827140784473990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1280
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5830c37c727a6fcf0800000000000000
+      internalID: -218803742592728187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1280
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e762e273a05cc140800000000000000
+      internalID: 4741253170651621347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1280
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e492ba9c7e6c350800000000000000
+      internalID: 6036767203882782219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f74dd93bdae3f50800000000000000
+      internalID: 6863113869117914888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75e384217c8689f0800000000000000
+      internalID: -466531093814450821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 960
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7429c73a6835200800000000000000
+      internalID: 167625647870592952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db6ca93804a60700800000000000000
+      internalID: 506272363360054231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bit_gridbomber_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 960
+        width: 320
+        height: 320
+      alignment: 9
+      pivot: {x: 0.48125, y: 0.153125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77add9cc249170e10800000000000000
+      internalID: 2163725920666245751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f3e513a835800eb4193f0ab920f54fe4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.48124998807907107,"y":0.15312500298023225},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      bit_gridbomber_sprites_0: 8528957228200583243
+      bit_gridbomber_sprites_1: 653678544236930293
+      bit_gridbomber_sprites_10: -6250832532645769
+      bit_gridbomber_sprites_11: -5650827140784473990
+      bit_gridbomber_sprites_12: -218803742592728187
+      bit_gridbomber_sprites_13: 4741253170651621347
+      bit_gridbomber_sprites_14: 6036767203882782219
+      bit_gridbomber_sprites_15: 6863113869117914888
+      bit_gridbomber_sprites_16: -466531093814450821
+      bit_gridbomber_sprites_17: 167625647870592952
+      bit_gridbomber_sprites_18: 506272363360054231
+      bit_gridbomber_sprites_19: 2163725920666245751
+      bit_gridbomber_sprites_2: 5780751575839106893
+      bit_gridbomber_sprites_3: 128445734709927261
+      bit_gridbomber_sprites_4: 8249208292096084461
+      bit_gridbomber_sprites_5: 8638301971767086917
+      bit_gridbomber_sprites_6: -8151283382536532652
+      bit_gridbomber_sprites_7: -3879782333085971433
+      bit_gridbomber_sprites_8: 1374380953552504630
+      bit_gridbomber_sprites_9: -7158089865100388543
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
