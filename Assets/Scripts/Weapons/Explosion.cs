@@ -12,14 +12,14 @@ public class Explosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 1. Dano em Personagens
+        // Dano em Personagens
         BaseCharacter character = other.GetComponent<BaseCharacter>();
         if (character != null)
         {
             character.TakeDamage(m_Damage);
         }
 
-        // 2. Detonar outras Bombas (Reação em Cadeia)
+        // Explodir outras Bombas 
         Bomb bomb = other.GetComponent<Bomb>();
         if (bomb != null)
         {

@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   m_ExplosionCenter: {fileID: 2549158966310770290, guid: 2b118bf97e585cf459b7cf8d3cecb8fe, type: 3}
-  m_MiddleHorizontal: {fileID: 2549158966310770290, guid: cf0fef4ddb56c2f4bb16d7db3ce168a2, type: 3}
-  m_MiddleVertical: {fileID: 2549158966310770290, guid: 29b38f0b00832ec4a8eea96e24d89be1, type: 3}
+  m_MiddleHorizontal: {fileID: 2549158966310770290, guid: ccf1ec616e5aa1d4ab65d611ffde0c5d, type: 3}
+  m_MiddleVertical: {fileID: 2549158966310770290, guid: d4a9c674aa9184642b1a9885877d3a4d, type: 3}
   m_EndUp: {fileID: 2549158966310770290, guid: 5eb1b9cdcbfcc5d48a76f823842cf358, type: 3}
   m_EndDown: {fileID: 2549158966310770290, guid: 00e27945c2f119549a5f96cc77653e90, type: 3}
   m_EndLeft: {fileID: 2549158966310770290, guid: ce9b8582e7ea7e947ace0a87cb5435c7, type: 3}

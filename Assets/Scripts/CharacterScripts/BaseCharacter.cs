@@ -27,7 +27,7 @@ public abstract class BaseCharacter : MonoBehaviour
     public void Initialize()
     {
         IsAlive = true;
-        m_SpriteRenderer = GetComponent<SpriteRenderer>(); // Pega o sprite para fazer piscar
+        m_SpriteRenderer = GetComponent<SpriteRenderer>(); 
         Setup();
     }
 
@@ -58,11 +58,11 @@ public abstract class BaseCharacter : MonoBehaviour
         return true;
     }
 
-    // --- NOVA LÓGICA DE DANO ---
+
     public virtual void TakeDamage(int damage)
     {
         if (!IsAlive) return;
-        if (m_IsInvincible) return; // Se está invencível, ignora o dano!
+        if (m_IsInvincible) return; 
 
         Health -= damage;
 
@@ -75,7 +75,6 @@ public abstract class BaseCharacter : MonoBehaviour
         }
         else
         {
-            // Se sobreviveu, fica invencível por um tempo
             StartCoroutine(HandleInvincibility());
         }
     }
@@ -84,30 +83,26 @@ public abstract class BaseCharacter : MonoBehaviour
     {
         m_IsInvincible = true;
 
-        // Efeito visual de piscar (opcional, mas recomendado)
         float timer = 0;
         while (timer < m_InvincibilityDuration)
         {
-            if (m_SpriteRenderer) m_SpriteRenderer.enabled = !m_SpriteRenderer.enabled; // Pisca
+            if (m_SpriteRenderer) m_SpriteRenderer.enabled = !m_SpriteRenderer.enabled;
             yield return new WaitForSeconds(0.1f);
             timer += 0.1f;
         }
 
-        if (m_SpriteRenderer) m_SpriteRenderer.enabled = true; // Garante que fica visível no final
+        if (m_SpriteRenderer) m_SpriteRenderer.enabled = true; 
         m_IsInvincible = false;
     }
 
     protected virtual void Die()
     {
         if (!IsAlive) return;
-        //tocar som de morrer
         if (m_DeathSound) GameplayManager.Instance.PlaySFX(m_DeathSound);
         IsAlive = false;
         DieLogic();
         if (m_Animator) m_Animator.SetBool("Dead", true);
 
-        // Removemos o Destroy imediato aqui para dar chance ao Player de usar vidas extras
-        // O Destroy será chamado manualmente nos filhos se necessário
     }
 
     protected abstract void DieLogic();

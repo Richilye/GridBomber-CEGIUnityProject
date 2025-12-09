@@ -25,7 +25,6 @@ public class ItemPickup : MonoBehaviour
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
-                // Toca o som no local do item, independente do objeto morrer
                 if (m_PickupSound != null)
                     GameplayManager.Instance.PlaySFX(m_PickupSound);
 
@@ -48,7 +47,7 @@ public class ItemPickup : MonoBehaviour
                 player.AddExplosionRange();
                 break;
             case ItemType.SpeedUp:
-                player.AddSpeed(1f); // Aumenta velocidade em 1
+                player.AddSpeed(0.5f);
                 break;
             case ItemType.ExtraLife:
                 player.AddLife();

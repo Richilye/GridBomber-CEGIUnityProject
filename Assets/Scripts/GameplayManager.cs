@@ -19,21 +19,21 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] private UIManager m_uiManager;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource m_MusicSource; // Crie um AudioSource no objeto Managers
+    [SerializeField] private AudioSource m_MusicSource;
     [SerializeField] private AudioSource m_SfxSource;
     [SerializeField] private AudioClip m_StageBGM;
 
     [Header("Prefabs")]
-    [SerializeField] private FloatingScore m_ScorePopupPrefab; //prefab do floating text.
+    [SerializeField] private FloatingScore m_ScorePopupPrefab;
 
     private bool m_isGameRunning;
     private float m_gameplayTimer;
 
-    // --- VARIÁVEIS DE SCORE E COMBO ---
+    // --- VARIÁVEIS DE SCORE ---
     private int m_CurrentScore;
     private int m_ComboMultiplier = 1;
     private float m_LastKillTime = 0f;
-    private const float COMBO_WINDOW = 0.5f; // Meio segundo para manter o combo
+    private const float COMBO_WINDOW = 0.5f; //tempo de combo kills
 
     public static GameplayManager Instance;
 
@@ -72,7 +72,7 @@ public class GameplayManager : MonoBehaviour
         if (m_MusicSource && m_StageBGM)
         {
             m_MusicSource.clip = m_StageBGM;
-            m_MusicSource.loop = true; // Loop infinito
+            m_MusicSource.loop = true;
             m_MusicSource.Play();
         }
         Canvas canvas = GetComponentInChildren<Canvas>();
@@ -112,7 +112,6 @@ public class GameplayManager : MonoBehaviour
         EndGameplay();
     }
 
-    // --- LÓGICA DE COMBO NOVA ---
     private void HandleOnEnemyDied(Vector3 enemyPosition)
     {
         if (Time.time - m_LastKillTime < COMBO_WINDOW) m_ComboMultiplier++;
@@ -124,10 +123,9 @@ public class GameplayManager : MonoBehaviour
         OnScoreChanged?.Invoke(m_CurrentScore);
         m_LastKillTime = Time.time;
 
-        // --- NOVA LÓGICA: SPAWNAR O TEXTO ---
         if (m_ScorePopupPrefab != null)
         {
-            // Cria o texto na posição do inimigo
+            // Cria texto na posição do inimigo morto
             FloatingScore popup = Instantiate(m_ScorePopupPrefab, enemyPosition, Quaternion.identity);
             popup.Setup(points);
         }

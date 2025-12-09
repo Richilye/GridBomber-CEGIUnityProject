@@ -90,14 +90,13 @@ public class Bomb : MonoBehaviour
 
             Collider2D hit = Physics2D.OverlapBox(position, Vector2.one * 0.5f, 0, m_LevelLayer);
 
-            // Se bateu em algo (Parede ou Bloco)
+            //verifica colisão
             if (hit != null)
             {
                 DestructibleBlock block = hit.GetComponent<DestructibleBlock>();
                 if (block != null)
                 {
                     block.DestroyBlock();
-                    // Na parede quebrável, usamos a PONTA correta para aquela direção
                     Instantiate(GetEndPrefab(direction), position, Quaternion.identity);
                 }
                 Bomb otherBomb = hit.GetComponent<Bomb>();
@@ -105,14 +104,14 @@ public class Bomb : MonoBehaviour
                 break;
             }
 
-            // Se for o último bloco do range
+
             if (i == m_ExplosionRange)
             {
                 Instantiate(GetEndPrefab(direction), position, Quaternion.identity);
             }
             else
             {
-                // Se for meio do caminho
+
                 Instantiate(GetMiddlePrefab(direction), position, Quaternion.identity);
             }
 
@@ -120,7 +119,7 @@ public class Bomb : MonoBehaviour
         }
     }
 
-    // --- LÓGICA PARA ESCOLHER O PREFAB CERTO ---
+    // --- LÓGICA PARA ESCOLHER O PREFAB CORRETO ---
     private Explosion GetEndPrefab(Vector2 direction)
     {
         if (direction == Vector2.up) return m_EndUp;

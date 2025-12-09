@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f24595d59f5c64bb16a49e46662e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestructibleBlock
-  m_DestroyDelay: 0.1
+  m_DestroyVFX: {fileID: 6471934097510217611, guid: 436f7b36ac9481d4d837d43cbbc8f068, type: 3}
   m_PossibleDrops:
   - {fileID: 996421406161966337, guid: f40bd1d9a30f93746a9f0497a838e49f, type: 3}
   - {fileID: 996421406161966337, guid: f8e57b32b8a99ab409714d4450565f66, type: 3}

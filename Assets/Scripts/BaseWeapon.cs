@@ -16,24 +16,21 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public void SetActive(bool value)
     {
-        // A versão do professor exigia um objeto m_Root aqui.
-        // A nossa versão apenas ativa/desativa o componente/gameobject inteiro.
         gameObject.SetActive(value);
     }
 
     public virtual bool CanUse()
     {
-        // TRAVA 1: Tem dono?
         if (m_Owner == null)
         {
             Debug.LogError($"A arma {name} não tem Dono! O Player não chamou SetOwner.");
             return false;
         }
 
-        // TRAVA 2: Cooldown (Tempo entre bombas)
+        // Cooldown
         if (Time.time - m_LastAttackTime < m_AttackCooldown)
         {
-            return false; // Ainda está recarregando
+            return false;
         }
 
         return true;

@@ -32,9 +32,6 @@ public class Player : BaseCharacter
 
     }
 
-    // --- CORREÇÃO DO INPUT SYSTEM ---
-    // Usamos OnEnable e OnDisable para ligar e desligar os controles
-    // Isso garante que quando o objeto morrer, os inputs param de chamar ele.
 
     private void OnEnable()
     {
@@ -104,17 +101,15 @@ public class Player : BaseCharacter
         }
         else
         {
-            // Parado
             m_Animator.SetBool("IsMoving", false);
             m_Animator.SetInteger("Speed", 0);
 
-            // NOTA: Não zeramos o InputX/InputY aqui!
-            // Se deixarmos os valores antigos, o Blend Tree "lembra" a última direção.
         }
     }
 
     protected override void UpdateLogic() { }
 
+    // Usar FixedUpdate para movimentação física para evitar bugs de colisão com paredes.
     private void FixedUpdate()
     {
         if (CanWalk())
@@ -136,7 +131,6 @@ public class Player : BaseCharacter
 
     public void AddMaxBombs()
     {
-        // Precisamos achar a arma de bomba na lista
         foreach (var weapon in m_Weapons)
         {
             if (weapon is BombPlacer placer)
@@ -160,7 +154,6 @@ public class Player : BaseCharacter
     public void AddSpeed(float amount)
     {
         m_Speed += amount;
-        // Limite máximo para não ficar incontrolável (opcional)
         if (m_Speed > 10f) m_Speed = 10f;
         Debug.Log("Speed Up! Nova velocidade: " + m_Speed);
     }

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_DeathSound: {fileID: 0}
   m_InvincibilityDuration: 2
   m_Speed: 2
-  m_Animator: {fileID: 0}
+  m_Animator: {fileID: 4611990849902941434}
   m_Weapons: []
   m_ObstacleLayer:
     serializedVersion: 2
@@ -190,7 +190,7 @@ Animator:
   m_GameObject: {fileID: 6518334547447146018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60cc10b872892a6409b3057a324a031b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
