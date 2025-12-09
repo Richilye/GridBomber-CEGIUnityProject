@@ -75,9 +75,6 @@ public class GameplayManager : MonoBehaviour
             m_MusicSource.loop = true;
             m_MusicSource.Play();
         }
-        Canvas canvas = GetComponentInChildren<Canvas>();
-        if (canvas.worldCamera == null)
-            canvas.worldCamera = Camera.main;
     }
 
     private void Update()
